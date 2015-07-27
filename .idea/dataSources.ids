@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - notebooks@localhost" uuid="fc03766f-776a-4105-8f6a-a6de2d933fb9">
+    <database-info product="MySQL" version="5.6.25-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="notebooks"/>
+    <table name="accumulator" schema="" catalog="notebooks" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="capacity" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="sections" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="camera" schema="" catalog="notebooks" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="pixels" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="cores" schema="" catalog="notebooks" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="num_cores" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="friquency" schema="" catalog="notebooks" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="friquencies" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="identity" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="model" schema="" catalog="notebooks" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="model_full_name" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="model_short_name" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="camera" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="accumulator" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="processor" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="cores" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="network" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="operation_system" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="producers" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="ram_friquency" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="ram_type" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="ram_value" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="screen_diagonal" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="screen_matrix" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="screen_resolution" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="videocard_model" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="videocard_size" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="videocard_producer" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="hdd_value" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="friquency" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="prod_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="id_UNIQUE" unique="true" columns="id"/>
+    </table>
+    <table name="network" schema="" catalog="notebooks" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="wifi" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="wifi_standarts" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="ethernet" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="eth_speed" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="notebooks" schema="" catalog="notebooks" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="producer" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="model_short" sqlType="VARCHAR" precision="150" scale="0" nullable="true" jdbcType="12"/>
+      <column name="model_full" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="operation_system" schema="" catalog="notebooks" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="type" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="processors" schema="" catalog="notebooks" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="producer" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="model" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="id_UNIQUE" unique="true" columns="id"/>
+    </table>
+    <table name="producers" schema="" catalog="notebooks" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="ram_friquency" schema="" catalog="notebooks" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="friquency" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="identity" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="ram_type" schema="" catalog="notebooks" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="type" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="ram_value" schema="" catalog="notebooks" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="memory_size" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="screen_diagonal" schema="" catalog="notebooks" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="diagonal" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="screen_matrix" schema="" catalog="notebooks" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="type_of_matrix" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="screen_resolution" schema="" catalog="notebooks" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="width" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="height" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="videocard_model" schema="" catalog="notebooks" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="model" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="videocard_producer" schema="" catalog="notebooks" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="videocard_size" schema="" catalog="notebooks" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="size" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="videocard_type" schema="" catalog="notebooks" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="type" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="vint_type" schema="" catalog="notebooks" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="memory_size" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="vint_value" schema="" catalog="notebooks" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="memory_size" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="identity" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+  </data-source>
+</component>

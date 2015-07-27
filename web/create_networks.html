@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create HDDs</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<form action="networks" method="GET">
+    <input type="hidden" name="method" value="create"/>
+    ID:<br>
+    <input type="text" name="id" placeholder="Changing Automaticaly" readonly><br>
+    Wi-Fi:<br>
+    <select name="wifi">
+        <option>Есть</option>
+        <option>Отсутствует</option>
+    </select><br>
+    Wi-Fi Standarts:<br>
+    <select name="wifi_standarts">
+        <option>IEEE 802.11b</option>
+        <option>IEEE 802.11g</option>
+        <option>IEEE 802.11n</option>
+        <option>IEEE 802.11 b/g/n</option>
+    </select>
+    Ethernet:<br>
+    <select name="ethernet">
+        <option value="true">Есть</option>
+        <option value="false">Отсутствует</option>
+    </select><br>
+    Ethernet Speed:<br>
+    <select name="eth_speed">
+        <option>10/100 Mb/ps</option>
+        <option>100/1000 Mb/ps</option>
+
+    </select>
+
+    <input type="submit" value="Save">
+</form>
+</body>
+</html>
